@@ -1,0 +1,17 @@
+Q2. Explain the difference between Absolute and Relative positioning.
+sol-
+Absolute Positioning:
+
+1. Relative to the nearest positioned ancestor: When an element is set to `position: absolute;`, it is positioned relative to the nearest ancestor element that is itself positioned (i.e., has a position value other than `static`). If there is no positioned ancestor, it is positioned relative to the initial containing block, which is usually the viewport.
+
+2. Out of flow: Elements with absolute positioning are taken out of the normal flow of the document. This means they do not affect the layout of other elements. Other elements act as if the absolutely positioned element does not exist, leading to potential overlapping if not managed properly.
+
+3. Fixed position: The position of an element with `position: absolute;` can be precisely defined using properties like `top`, `right`, `bottom`, and `left`. These properties determine the distance between the element and its positioned ancestor.
+
+Relative Positioning:
+
+1. Relative to its normal position: When an element is set to `position: relative;`, it is positioned relative to its normal position in the document flow. It will still occupy space in the normal flow, and its final position will be relative to where it would have been if it were not positioned.
+
+2. Doesn't affect surrounding elements: Elements with relative positioning can be moved using properties like `top`, `right`, `bottom`, and `left`, but the surrounding elements are not affected by its movement. In other words, the space the element originally occupied is preserved.
+
+3. Acts as a reference: Elements positioned relative serve as a reference point for absolutely positioned child elements. If a child element is positioned absolute within a relatively positioned parent, it will be positioned relative to its parent's relative position, not the viewport or any other ancestor.
